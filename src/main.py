@@ -60,11 +60,11 @@ class Main:
 
     def search(self):
         if len(self.library1.list1)>=1:
-            random1=random.randint(0,2)
+            random2=random.randint(0,2)
             book=self.library1.list1[random.randint(0,len(self.library1.list1)-1)]
-            if random1==0:
+            if random2==0:
                 logger.info(self.library1.search(book.isbn))
-            elif random==1:
+            elif random2==1:
                 logger.info(self.library1.search2(book.year))
             else:
                 logger.info(self.library1.search3(book.author))
@@ -73,14 +73,14 @@ class Main:
 
 
     def notsearch(self):
-        random1=random.randint(0,2)
+        random3=random.randint(0,2)
         if not self.library1.list1.__contains__(self.book1):
-            if random1 == 0:
+            if random3 == 0:
                 try:
                     logger.info(self.library1.search(self.book1.isbn))
                 except KeyError:
                     logger.error("Такой книги не существует")
-            elif random1 == 1:
+            elif random3 == 1:
                 try:
                     logger.info(self.library1.search2(self.book1.year))
                 except KeyError:
