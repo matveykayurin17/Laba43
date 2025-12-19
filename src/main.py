@@ -39,6 +39,16 @@ class Main:
                     self.notsearch()
         else:
             random.seed(seed)
+            for i in range(steps):
+                random1 = random.randint(0, 3)
+                if random1 == 0:
+                    self.add_book()
+                elif random1 == 1:
+                    self.random_delete()
+                elif random1 == 2:
+                    self.search()
+                else:
+                    self.notsearch()
 
     def add_book(self):
         title=title1[random.randint(0,len(title1)-1)]
